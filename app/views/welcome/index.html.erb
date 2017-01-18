@@ -1,0 +1,15 @@
+<div class="center jumbotron">
+  <h2>
+    Welcome to the KfH innovation database
+  </h2>
+<p>Search our innovations</p>  
+  <%= form_tag(innovations_path, method: :get) do %>
+    <%= text_field_tag :term, nil, class: 'input-lg col-xs-10'	 %>
+    <%= submit_tag '  Search', class: 'btn btn-lg btn-primary', name: nil %>
+  <% end %>
+
+
+</div>
+
+<p>Add a new innovation - <%= link_to 'New Innovation', new_innovation_path %></p>
+<p>View existing innovations - <%= link_to "View innovations", innovations_path %></p>

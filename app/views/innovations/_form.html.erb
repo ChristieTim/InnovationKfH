@@ -1,0 +1,113 @@
+<div class="form-horizontal"> 
+  <%= form_for innovation, html: { class: 'form-horizontal' } do |f| %>
+    <% if innovation.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(innovation.errors.count, "error") %> prohibited this innovation from being saved:</h2>
+
+        <ul>
+        <% innovation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form-group">
+      <%= f.label :date, class: 'control-label col-sm-3' %>
+      <div class="controls">
+        <%= f.date_select :date %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :'Your name', class: 'control-label col-sm-3  ' %>
+      <div class="controls">
+        <%= f.text_field :author, class: 'input-lg col-xs-5' %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :'Title of innovation' , class: 'control-label col-sm-3'%>
+      <div class="controls">
+        <%= f.text_field :title, class: 'input-lg col-xs-5' %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :'Organisational aim', class: 'control-label col-sm-3' %>
+      <div class="controls">
+        <%= f.text_area :orgaim,  cols: "30", rows: "10", class: 'input-lg col-xs-5' %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :tags, class: 'control-label col-sm-3' %>
+      <div class="controls">
+        <%= f.text_field :tags, class: 'input-lg col-xs-5' %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :summary, class: 'control-label col-sm-3' %>
+      <div class="controls">
+        <%= f.text_area :summary,  cols: "30", rows: "10", class: 'input-lg col-xs-5'  %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :'Have you done an LKS search?', class: 'control-label col-sm-3' %>
+      <div class="controls">
+        <%= f.check_box :lksSearch %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :'Describe the context', class: 'control-label col-sm-3' %>
+      <div class="controls">
+        <%= f.text_area :context,  cols: "30", rows: "10", class: 'input-lg col-xs-5'  %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :'Aims and objectives', class: 'control-label col-sm-3' %>
+      <div class="controls">
+        <%= f.text_area :aimsobs,  cols: "30", rows: "10", class: 'input-lg col-xs-5'  %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :methods, class: 'control-label col-sm-3' %>
+      <div class="controls">
+        <%= f.text_area :methods,  cols: "30", rows: "10", class: 'input-lg col-xs-5'  %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :collaboration, class: 'control-label col-sm-3' %>
+      <div class="controls">
+        <%= f.text_area :collaboration,  cols: "30", rows: "10", class: 'input-lg col-xs-5'  %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :ip, class: 'control-label col-sm-3' %>
+      <div class="controls">
+        <%= f.check_box :ip %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :learningpoints, class: 'control-label col-sm-3' %>
+      <div class="controls">
+        <%= f.text_area :learningpoints,  cols: "30", rows: "10", class: 'input-lg col-xs-5'  %>
+      </div>
+    </div>
+<br />
+    <div class="field form-group">
+      <div class="controls">
+        <%= f.submit 'Submit', class: 'btn btn-default col-sm-offset-2' %> <%= link_to 'Back', innovations_path, class: 'btn btn-info' %>
+
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+<div class="form-horizontal"> 
+    <div class="col-sm-offset-1">
+<h3>
+    <%= @innovation.title %>
+  </h3>
+  </div>
+  <div class="col-sm-offset-2">
+  <p>
+    <strong>Author:</strong>
+    <%= @innovation.author %>
+  </p>
+
+
+  <p>
+    <strong>Organisational aim:</strong><br />
+    <%= @innovation.orgaim %>
+  </p>
+
+  <p>
+    <strong>Tags:</strong><br />
+    <%= @innovation.tags %>
+  </p>
+
+  <p>
+    <strong>Summary:</strong><br />
+    <%= @innovation.summary %>
+  </p>
+
+  <p>
+    <strong>Lkssearch:</strong>
+    <%= @innovation.lksSearch %>
+  </p>
+
+  <p>
+    <strong>Context:</strong><br />
+    <%= @innovation.context %>
+  </p>
+
+  <p>
+    <strong>Aimsobs:</strong><br />
+    <%= @innovation.aimsobs %>
+  </p>
+
+  <p>
+    <strong>Methods:</strong><br />
+    <%= @innovation.methods %>
+  </p>
+
+  <p>
+    <strong>Collaboration:</strong><br />
+    <%= @innovation.collaboration %>
+  </p>
+
+  <p>
+    <strong>Ip:</strong>
+    <%= @innovation.ip %>
+  </p>
+
+  <p>
+    <strong>Learningpoints:</strong><br />
+    <%= @innovation.learningpoints %>
+  </p>
+
+  <p>
+    <strong>Date added:</strong>
+    <%= @innovation.date.strftime("%d/%m/%Y") %>
+  </p>
+  <!--<%= link_to 'Edit', edit_innovation_path(@innovation) %> |-->
+  <%= link_to 'Back', innovations_path, class: 'btn btn-info' %> <%= link_to 'Edit', edit_innovation_path(@innovation), class: 'btn btn-mini btn-success' %>  <%= link_to 'Destroy', @innovation, method: :delete, class: 'btn btn-mini btn-danger' , data: { confirm: 'Are you sure?' }%>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <h1>Innovations</h1>
+  <div class="pull-right search-query">
+    <%= form_tag(innovations_path, method: :get) do %>
+      <%= text_field_tag :term %>
+      <%= submit_tag 'Search', class: 'btn btn-mini btn-primary', name: nil %>
+    <% end %>
+  </div>
+</div>
+<%= link_to 'Add your innovation', new_innovation_path, class: 'btn btn-info' %>
+<div class="media">
+  <div class="media-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Date</th>
+          <th>Author</th>
+          <th>Title</th>
+          <th>Tags</th>
+          <!--<th>Summary</th>
+          <th>Orgaim</th>
+          <th>Lkssearch</th>
+          <th>Context</th>
+          <th>Aimsobs</th>
+          <th>Methods</th>
+          <th>Collaboration</th>
+          <th>Ip</th>
+          <th>Learningpoints</th>-->
+        </tr>
+      </thead>
+
+      <tbody>
+        <% for innovation in @innovations %>
+          <tr>
+            <td><%= link_to 'View', innovation, class: 'btn btn-primary' %></td>
+            <td><%= innovation.date.strftime("%d/%m/%Y") %></td>
+            <td><%= innovation.author %></td>
+            <td><%= innovation.title %></td>
+            <td><%= innovation.tags %></td>
+            <!--<td><%= innovation.orgaim %></td>
+            <td><%= innovation.summary %></td>
+            <td><%= innovation.lksSearch %></td>
+            <td><%= innovation.context %></td>
+            <td><%= innovation.aimsobs %></td>
+            <td><%= innovation.methods %></td>
+            <td><%= innovation.collaboration %></td>
+            <td><%= innovation.ip %></td>
+            <td><%= innovation.learningpoints %></td>-->
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<br>
+
+
