@@ -13,7 +13,7 @@
 
 
   <p>
-    <strong>Organisational aim:</strong><br />
+    <strong>Email:</strong>
     <%= @innovation.orgaim %>
   </p>
 
@@ -23,43 +23,34 @@
   </p>
 
   <p>
-    <strong>Summary:</strong><br />
+    <strong>Organisation/Service:</strong><br />
     <%= @innovation.summary %>
   </p>
 
   <p>
-    <strong>Lkssearch:</strong>
-    <%= @innovation.lksSearch %>
-  </p>
-
-  <p>
-    <strong>Context:</strong><br />
+    <strong>Who asked:</strong><br />
     <%= @innovation.context %>
   </p>
 
   <p>
-    <strong>Aimsobs:</strong><br />
+    <strong>What they said:</strong><br />
     <%= @innovation.aimsobs %>
   </p>
 
   <p>
-    <strong>Methods:</strong><br />
+    <strong>What was done:</strong><br />
     <%= @innovation.methods %>
   </p>
 
   <p>
-    <strong>Collaboration:</strong><br />
+    <strong>How it helped:</strong><br />
     <%= @innovation.collaboration %>
   </p>
 
   <p>
-    <strong>Ip:</strong>
-    <%= @innovation.ip %>
-  </p>
-
-  <p>
-    <strong>Learningpoints:</strong><br />
-    <%= @innovation.learningpoints %>
+    <strong>External link:</strong><br />
+    <%= link_to @innovation.learningpoints, "http://#{@innovation.learningpoints}", :target => "_blank"  %>
+    
   </p>
 
   <p>

@@ -20,13 +20,6 @@
     </div>
 
     <div class="field form-group form-group-lg  ">
-      <%= f.label :'Your name', class: 'control-label col-sm-3  ' %>
-      <div class="controls">
-        <%= f.text_field :author, class: 'input-lg col-xs-5' %>
-      </div>
-    </div>
-
-    <div class="field form-group form-group-lg  ">
       <%= f.label :'Title of innovation' , class: 'control-label col-sm-3'%>
       <div class="controls">
         <%= f.text_field :title, class: 'input-lg col-xs-5' %>
@@ -34,9 +27,16 @@
     </div>
 
     <div class="field form-group form-group-lg  ">
-      <%= f.label :'Organisational aim', class: 'control-label col-sm-3' %>
+      <%= f.label :'Your name', class: 'control-label col-sm-3  ' %>
       <div class="controls">
-        <%= f.text_area :orgaim,  cols: "30", rows: "10", class: 'input-lg col-xs-5' %>
+        <%= f.text_field :author, class: 'input-lg col-xs-5' %>
+      </div>
+    </div>
+
+    <div class="field form-group form-group-lg  ">
+      <%= f.label :'Your email', class: 'control-label col-sm-3' %>
+      <div class="controls">
+        <%= f.text_area :orgaim, class: 'input-lg col-xs-5' %>
       </div>
     </div>
 
@@ -48,58 +48,44 @@
     </div>
 
     <div class="field form-group form-group-lg  ">
-      <%= f.label :summary, class: 'control-label col-sm-3' %>
+      <%= f.label :'Your service organisation', class: 'control-label col-sm-3' %>
       <div class="controls">
         <%= f.text_area :summary,  cols: "30", rows: "10", class: 'input-lg col-xs-5'  %>
       </div>
     </div>
 
     <div class="field form-group form-group-lg  ">
-      <%= f.label :'Have you done an LKS search?', class: 'control-label col-sm-3' %>
-      <div class="controls">
-        <%= f.check_box :lksSearch %>
-      </div>
-    </div>
-
-    <div class="field form-group form-group-lg  ">
-      <%= f.label :'Describe the context', class: 'control-label col-sm-3' %>
+      <%= f.label :'Who asked?', class: 'control-label col-sm-3' %>
       <div class="controls">
         <%= f.text_area :context,  cols: "30", rows: "10", class: 'input-lg col-xs-5'  %>
       </div>
     </div>
 
     <div class="field form-group form-group-lg  ">
-      <%= f.label :'Aims and objectives', class: 'control-label col-sm-3' %>
+      <%= f.label :'What did they say?', class: 'control-label col-sm-3' %>
       <div class="controls">
         <%= f.text_area :aimsobs,  cols: "30", rows: "10", class: 'input-lg col-xs-5'  %>
       </div>
     </div>
 
     <div class="field form-group form-group-lg  ">
-      <%= f.label :methods, class: 'control-label col-sm-3' %>
+      <%= f.label :'What did you do?', class: 'control-label col-sm-3' %>
       <div class="controls">
         <%= f.text_area :methods,  cols: "30", rows: "10", class: 'input-lg col-xs-5'  %>
       </div>
     </div>
 
     <div class="field form-group form-group-lg  ">
-      <%= f.label :collaboration, class: 'control-label col-sm-3' %>
+      <%= f.label :'How did it help?', class: 'control-label col-sm-3' %>
       <div class="controls">
         <%= f.text_area :collaboration,  cols: "30", rows: "10", class: 'input-lg col-xs-5'  %>
       </div>
     </div>
 
     <div class="field form-group form-group-lg  ">
-      <%= f.label :ip, class: 'control-label col-sm-3' %>
+      <%= f.label :'External link', class: 'control-label col-sm-3' %>
       <div class="controls">
-        <%= f.check_box :ip %>
-      </div>
-    </div>
-
-    <div class="field form-group form-group-lg  ">
-      <%= f.label :learningpoints, class: 'control-label col-sm-3' %>
-      <div class="controls">
-        <%= f.text_area :learningpoints,  cols: "30", rows: "10", class: 'input-lg col-xs-5'  %>
+        <%= f.text_area :learningpoints, class: 'input-lg col-xs-5'  %>
       </div>
     </div>
 <br />

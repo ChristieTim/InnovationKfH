@@ -12,11 +12,11 @@
   <div class="container">
 	  <ul class="nav nav-tabs">
 	    <li><%= link_to "Home", root_path %></li>
-	    <li><%= link_to "About us", welcome_about_path %></li>
-	    <li><%= link_to "About this project", welcome_project_path %></li>
-	    <li><%= link_to "Contact", welcome_contact_path %></li>
+	    <li><%= link_to "About us", '/aboutus' %></li>
+	    <li><%= link_to "About this project", '/project' %></li>
+	    <li><%= link_to "Contact", '/contactus' %></li>
 	    <li><%= link_to "Innovations", innovations_path %></li>
-	    <li><%= link_to "Login (not implemented)", root_path %></li>
+	    <li><%= link_to "Login (not implemented)", '/welcome' %></li>
 	 </ul>
 
     <%= yield %>

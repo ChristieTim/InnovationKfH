@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'#, '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -62,3 +62,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass', '3.3.6'
 gem 'autoprefixer-rails'
 
+#cameleon cms stuff
+gem "camaleon_cms",  '>= 2.4.3' # Stable versions 2.3.6, 2.2.1, 2.1.1, 2.1.0
+# gem "camaleon_cms", github: 'owen2345/camaleon-cms' # current development version
+gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
+gem 'draper', github: 'audionerd/draper', branch: 'rails5'
+
+
+#################### Camaleon CMS include all gems for plugins and themes #################### 
+require './lib/plugin_routes' 
+instance_eval(PluginRoutes.draw_gems)

@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
+<div class="jumbotron">
+</div>
+
   <h1>Innovations</h1>
   <div class="pull-right search-query">
     <%= form_tag(innovations_path, method: :get) do %>
@@ -8,6 +11,7 @@
     <% end %>
   </div>
 </div>
+
 <%= link_to 'Add your innovation', new_innovation_path, class: 'btn btn-info' %>
 <div class="media">
   <div class="media-body">
